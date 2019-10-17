@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Бытовки</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	header{
+		
+		
+	}
+	nav{
+		height: 3em;
+	}
+	.container{
+		border-bottom: 1px solid black;
+		padding: 0 10%;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		-ms-align-items: baseline;
+		align-items: center;
+	}
+	.column{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	nav a{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	.topmenu{
+		position: relative;
+	}
+	.topmenu:hover .submenu {display: block;}
+	.submenu{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		display: none;
+	}
+	main{
+		padding: 0 10%;
+	}
+</style>
+</head>
+<body>
+	<header class="container">
+		<a href="index.html"><span>logo</span></a>
+		<button> Заказать звонок </button>
+		<form action="">
+			<input type="text">
+			<input type="submit" value="поиск">
+		</form>		
+		<div class="column">
+			<span>Телефон</span>
+			<span>Режим работы</span>
+			<span>Адрес</span>
+		</div>
+	</header>
+	<nav class="container">
+		<a href="">О компании</a>
+		<a href="">Продукция</a>
+		<a class="topmenu" href="">Наши работы <ul class="submenu">
+			<li>Строения контейнерного типа</li>
+			<li>Бытовки и дома</li>
+			<li>Модульные здания</li>
+			<li>Бани и печки</li>
+		</ul></a>
+		<a href="">Статьи</a>
+		<a href="">Контакты</a>
+	</nav>
+	<main>
+		<h1>Продукция компании</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+			Fugiat aliquid, neque repellat tenetur eum obcaecati reiciendis 
+			ipsum enim reprehenderit vitae perferendis natus voluptates 
+			laborum officiis iure pariatur qui, quos, eos!
+		</p>
+		<div class="filter">
+			<form action="">
+				<input type="text">
+				<input type="text">
+			</form>
+			
+		</div>
+	</main>
+	
+</body>
+</html>

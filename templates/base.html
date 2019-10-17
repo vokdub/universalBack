@@ -1,0 +1,104 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {%block head%}
+    <meta charset="UTF-8">
+    <title>Goods</title>
+    <!--     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="{% static 'libs\Brazzers-Carousel\jQuery.Brazzers-Carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css\main.css'%}">
+    <script src="{%static 'js\main.js'%}"></script>
+
+    {%endblock head%}
+</head>
+<body>
+{%block body%}
+<header class="container">
+    <a href="/"><img src="{% static 'jpg\logo.png'%}" alt="" class="logo"></a>
+    <button> Заказать звонок</button>
+    <form action="">
+        <input type="text">
+        <input type="submit" value="поиск">
+    </form>
+    <div class="column">
+        <span>Телефон</span>
+        <span>Режим работы</span>
+        <span>Адрес</span>
+    </div>
+</header>
+<nav class="container">
+    <a href="">О компании</a>
+    <a class="topmenu" href="/productions">Продукция
+        <ul class="submenu">
+            <li>Строения контейнерного типа</li>
+            <li>Бытовки и дома</li>
+            <li>Модульные здания</li>
+            <li>Бани и печки</li>
+        </ul>
+    </a>
+    <a href="">Наши работы </a>
+
+    <a href="">Статьи</a>
+    <a href="">Контакты</a>
+</nav>
+{%block main%}{%endblock main%}
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="{% static 'libs\Brazzers-Carousel\jQuery.Brazzers-Carousel.min.js' %}"></script>
+<script>
+            $(document).ready(function() {
+                $(".thumb-item").brazzersCarousel();
+            });
+
+
+
+</script>
+<footer>
+    {%block footer%}
+    <div class="footer">
+        <h3>Свяжитесь с нами сейчас и получите бесплатную консультацию специалиста</h3>
+        <button>Заказать звонок</button>
+    </div>
+    <div class="footer">
+        <div class="threeInARow">
+            <img src="{% static 'jpg\logo.png'%}" alt="" class="logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nulla illum quis, quae molestiae
+                praesentium
+                rerum, labore iure libero accusantium quia nobis. Quidem numquam tempore asperiores a quas neque ut!</p>
+        </div>
+        <div class="threeInARow">
+            <ul>
+                <li><a href="">Дома</a></li>
+                <li><a href="">Бытовки</a></li>
+                <li><a href="">Бани</a></li>
+                <li><a href="">Печи и дымоходы</a></li>
+                <li><a href="">Посты охраны</a></li>
+                <li><a href="">Модульные здания</a></li>
+                <li><a href="">Сантехнические блок-контейнеры</a></li>
+                <li><a href="">Аренда</a></li>
+            </ul>
+        </div>
+        <div class="threeInARow">
+            <h2>Наши контакты</h2>
+            <ul>
+                <li>Работаем по всему СЗФО</li>
+                <li>Работаем с 0 до 23 каждый день</li>
+                <li>тел. 8 900 777 77 77</li>
+                <li>zakaz@universal-stroyspb.ru</li>
+                <li>СПБ, Купчино, ул. Пушкина</li>
+            </ul>
+        </div>
+    </div>
+    {%endblock footer%}
+</footer>
+{%endblock body%}
+</body>
+</html>

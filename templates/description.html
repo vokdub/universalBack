@@ -1,0 +1,59 @@
+{%extends "base.html"%}
+{%block main%}
+<div class="wrap">
+<aside>
+<div id="navigation">
+<ul>
+<li><a href="">Дома</a></li>
+<li><a href="">Бытовки</a></li>
+<li><a href="">Бани</a></li>
+<li><a href="">Печи и дымоходы</a></li>
+<li><a href="">Посты охраны</a></li>
+<li><a href="">Модульные здания</a></li>
+<li><a href="">Сантехнические блок-контейнеры</a></li>
+<li><a href="">Аренда</a></li>
+</ul>
+</div>
+<div id="ourWorks">
+<h3>Наши работы</h3>
+<div id="slider">
+slider
+</div>
+</div>
+<div id="resentlyViewed">
+<h3>Недавно вы смотрели</h3>
+</div>
+<div id="media">
+media
+</div>
+</aside>
+<main class="main">
+<h1>Дом</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia libero dignissimos saepe, at maxime laboriosam provident quod illum a adipisci aut sapiente reiciendis, amet, quisquam officia inventore voluptatum ratione!</p>
+<div>
+<div id="pictures">pictures</div>
+<div id="description">
+<h3>Размер: <span id="size">{{desc.size}}</span></h3>
+<h3>Количество этажей: <span id="floors">{{desc.size}}</span></h3>
+<h3>Количество комнат: <span id="rooms">{{desc.size}}</span></h3>
+<h3>Общая площадь: <span id="square">{{desc.size}}</span></h3>
+<h3>Окна: <span id="door">{{desc.size}}</span></h3>
+<h3>Дверь: <span id="windows">{{desc.size}}</span></h3>
+<button id="complectation">Дополнительная комплектация</button>
+<h3>Цена: <span id="price">{{desc.size}}</span>руб</h3>
+</div>
+</div>
+<h3>Показать 3-D модель</h3>
+<div></div>
+<h3>Что входит в комплект</h3>
+<ul>
+<li>Пункт списка</li>
+<li>Пункт списка</li>
+<li>Пункт списка</li>
+<li>Пункт списка</li>
+<li>Пункт списка</li>
+</ul>
+<div id="comment">comment</div>
+</main>
+</div>
+{%endblock main%}

@@ -1,0 +1,77 @@
+{%extends "base.html"%}
+{% load staticfiles %}
+{%block main%}
+<h1>{{info}}</h1>
+<div class="wrap">
+    <aside>
+
+        <div id="navigation">
+            <ul>
+                <li><a href="">Дома</a></li>
+                <li><a href="">Бытовки</a></li>
+                <li><a href="">Бани</a></li>
+                <li><a href="">Печи и дымоходы</a></li>
+                <li><a href="">Посты охраны</a></li>
+                <li><a href="">Модульные здания</a></li>
+                <li><a href="">Сантехнические блок-контейнеры</a></li>
+                <li><a href="">Аренда</a></li>
+            </ul>
+        </div>
+        <div id="ourWorks">
+            <h3>Наши работы</h3>
+            <div id="slider">
+                slider
+            </div>
+        </div>
+        <div id="resentlyViewed">
+            <h3>Недавно вы смотрели</h3>
+        </div>
+        <div id="media">
+            media
+        </div>
+    </aside>
+    <main class="main">
+        <h1>Продукция компании</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fugiat aliquid, neque repellat tenetur eum obcaecati reiciendis
+            ipsum enim reprehenderit vitae perferendis natus voluptates
+            laborum officiis iure pariatur qui, quos, eos!
+        </p>
+        <div class="filter">
+            <form action="catalog">
+                <input type="search" name="search">
+                <input type="submit" value="Поиск">
+            </form>
+
+        </div>
+
+
+        <ol class="goods">
+            {%for house in houses%}
+            <li id="{{house.name}}" onclick="goto(this)">
+                <div class="carousel">
+                    <div class="thumb-item">
+                        <img src="{% static 'jpg\0.jpg' %}" alt="Alt">
+                        <img src="{% static 'jpg\1.jpg' %}" alt="Alt">
+                        <img src="{% static 'jpg\2.jpg' %}" alt="Alt">
+                        <img src="{% static 'jpg\3.jpg' %}" alt="Alt">
+                    </div>
+                </div>
+                <p>Название: {{house.name}} <br> площадь : {{house.square}} кв.м. <br> {{house.description}}</p>
+            </li>
+            {%endfor%}
+        </ol>
+        <button id="pop" onclick="popo()">next</button>
+
+        <!-- <div class="sketchfab-embed-wrapper">
+            <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/39be92585a02482d82516d5a1f01d464/embed?autospin=0.2&amp;autostart=1&amp;preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                <a href="https://sketchfab.com/3d-models/house-model-new-pc-test-simplified-3d-mesh-39be92585a02482d82516d5a1f01d464?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">House Model New Pc Test Simplified 3d Mesh</a>
+                by <a href="https://sketchfab.com/Bergmann_Survey?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Bergmann_Survey</a>
+                on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+            </p>
+        </div> -->
+    </main>
+</div>
+{%endblock main%}
